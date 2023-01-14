@@ -9,76 +9,18 @@
         <div class="container">
             <div class="row">
                 <!-- Single Best Receipe Area -->
+                {%for chave, valor in nome_do_aluno.items%}
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-best-receipe-area mb-30">
                         <img src="{% static 'img/bg-img/foto_laptop.png' %}" alt="">
                         <div class="receipe-content">
                             <a href="{% url 'aluno' %}">
-                                <h5>Nome do Aluno</h5>
+                                <h5>{{valor}}</h5>
                             </a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="{% static 'img/bg-img/foto_laptop.png' %}" alt="">
-                        <div class="receipe-content">
-                            <a href="{% url 'aluno' %}">
-                                <h5>Nome do Aluno</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="{% static 'img/bg-img/foto_laptop.png' %}" alt="">
-                        <div class="receipe-content">
-                            <a href="{% url 'aluno' %}">
-                                <h5>Nome do Aluno</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="{% static 'img/bg-img/foto_laptop.png' %}" alt="">
-                        <div class="receipe-content">
-                            <a href="{% url 'aluno' %}">
-                                <h5>Nome do Aluno</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="{% static 'img/bg-img/foto_laptop.png' %}" alt="">
-                        <div class="receipe-content">
-                            <a href="{% url 'aluno' %}">
-                                <h5>Nome do Aluno</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-best-receipe-area mb-30">
-                        <img src="{% static 'img/bg-img/foto_laptop.png' %} " alt="">
-                        <div class="receipe-content">
-                            <a href="{% url 'aluno' %}">
-                                <h5>Nome do Aluno</h5>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>
