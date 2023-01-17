@@ -1,18 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
+from.models import Alunos
+
 def index(request):
-    alunos = {
-       1: 'Maiara',
-       2: 'Felipe',
-       3: 'Marcos'
-   }
+    
+    alunos = Alunos.objects.all()
 
-    dados = {
-       'nome_do_aluno' : alunos
-   }
-
-    return render(request, 'index.html', dados)
+    return render(request, 'index.html', {'alunos': alunos})
 
 
 def aluno(request):
