@@ -7,7 +7,9 @@ def index(request):
     
     alunos = Alunos.objects.all()
 
-    return render(request, 'index.html', {'alunos': alunos})
+    dados = { 'alunos': alunos }
+
+    return render(request, 'index.html', dados)
 
 
 def aluno(request):
